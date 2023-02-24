@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Work Sans", sans-serif;
+}
+$gradient-color: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+$black-bg: linear-gradient(93.99deg, #566270 0.51%, #283444 100%);
+$transition: 0.4s linear;
+@mixin hovercolor {
+  background: $gradient-color;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+@mixin black-gradient {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+}
+@mixin flexprop($space) {
+  display: flex;
+  justify-content: $space;
+  align-items: center;
+}
+
+.Main-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 75px;
+  color: #081323;
+}
+.Main-paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #4f4f4f;
+}
+
+@media screen and (max-width: 991px) {
+  .Main-heading {
+    font-size: 55px;
+  }
+  .Main-paragraph {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Main-heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .Main-paragraph {
+    font-size: 16px;
+  }
+}

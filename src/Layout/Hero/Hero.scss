@@ -1,0 +1,121 @@
+@import "../../App.scss";
+.Hero {
+  width: 100%;
+  height: 1200px;
+  background-image: url("../../assets/Images/Hero.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+
+  .Hero-section {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 82px;
+      line-height: 96px;
+      text-align: center;
+      color: #ffffff;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+    .SearchPlant {
+      width: 463px;
+      margin: auto;
+      height: 70px;
+      padding: 0px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #ffffff;
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      @include flexprop(center);
+      input {
+        width: 90%;
+        height: 90%;
+        padding-left: 10px;
+        box-sizing: border-box;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+      }
+
+      button {
+        width: 50px;
+        height: 50px;
+        @include flexprop(center);
+        border-radius: 50%;
+        background: $gradient-color;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .Blur-Effect {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 83.65%
+    );
+    position: absolute;
+    bottom: 0;
+  }
+}
+::placeholder {
+  color: white;
+  font-size: 20px;
+}
+@media screen and (max-width: 991px) {
+  .Hero {
+    .Hero-section {
+      h1 {
+        font-size: 55px;
+        line-height: 70px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Hero {
+    background-size: cover;
+    background-position: center left;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Hero {
+    height: 900px;
+    .Hero-section {
+      h1 {
+        font-size: 35px;
+        line-height: 50px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .SearchPlant {
+        width: 100%;
+        box-sizing: border-box;
+        height: 60px;
+      }
+    }
+  }
+}

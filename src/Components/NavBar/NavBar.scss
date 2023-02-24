@@ -1,0 +1,100 @@
+@import "../../App.scss";
+nav {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  background-color: transparent;
+  .Navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    .Nav-logo {
+      width: 20%;
+      @include flexprop(start);
+
+      h3 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #ffffff;
+        margin-left: 3px;
+      }
+    }
+    .Main-nav {
+      z-index: 999;
+      width: 60%;
+      display: flex;
+      ul {
+        width: 100%;
+        @include flexprop(space-evenly);
+        li {
+          a {
+            transition: $transition;
+            color: white;
+            &:hover {
+              @include hovercolor;
+            }
+          }
+        }
+      }
+    }
+    .Hamburger {
+      width: 20%;
+      @include flexprop(center);
+      svg {
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+    .Hamburger {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    .Navbar {
+      .Nav-logo {
+        width: max-content;
+      }
+      .Main-nav {
+        width: 80%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  nav {
+    .Navbar {
+      justify-content: space-between;
+      .Nav-logo {
+        width: max-content;
+        h3 {
+          font-size: 28px;
+        }
+      }
+      .Main-nav {
+        width: 0%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+        transition: $transition;
+        ul {
+          flex-direction: column;
+          background: $black-bg;
+        }
+      }
+      .Main-nav-show {
+        width: 60%;
+      }
+      .Hamburger {
+        display: flex;
+        transition: $transition;
+      }
+    }
+  }
+}

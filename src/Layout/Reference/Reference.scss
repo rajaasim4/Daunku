@@ -1,0 +1,49 @@
+@import "../../App.scss";
+.Reference {
+  margin-top: 30px;
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  .Reference-main {
+    width: 90%;
+    margin: auto;
+    @include flexprop(space-between);
+    .Reference-left {
+      width: 49%;
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    .Reference-right {
+      width: 49%;
+      img {
+        width: 97%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .Reference {
+    .Reference-main {
+      flex-direction: column;
+      .Reference-left {
+        width: 100%;
+      }
+      .Reference-right {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
